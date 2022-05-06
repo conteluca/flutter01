@@ -5,13 +5,14 @@ class CustomListItem extends StatelessWidget {
   final double height;
   final double width;
   final String text;
-
+  final String img;
   const CustomListItem({
     Key? key,
     required this.height,
     required this.width,
     required this.text,
     required this.radius,
+    required this.img,
   }) : super(key: key);
 
   @override
@@ -29,8 +30,14 @@ class CustomListItem extends StatelessWidget {
           child: SizedBox(
             height: height,
             width: width,
-            child: Center(
-              child: Text(text),
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(radius),topRight:  Radius.circular(radius)),
+                  child: Image.network(img),
+                ),
+                Text(text),
+              ],
             ),
           ),
         ),

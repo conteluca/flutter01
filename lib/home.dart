@@ -60,6 +60,8 @@ class _HomeState extends State<Home> {
                           height: 200,
                           itemCount: 100,
                           itemBuilder: (context, index) => CustomListItem(
+                            img:
+                                "https://www.professioni.info/wp-content/uploads/2020/08/Make-up-artist.jpg",
                             radius: 20,
                             text: "Recent Activities $index",
                             height: 200,
@@ -68,12 +70,14 @@ class _HomeState extends State<Home> {
                         ),
                         const CustomTitle(title: "Recommended for you"),
                         HorizontalScrollList(
-                          height: 120,
+                          height: 180,
                           itemCount: 100,
                           itemBuilder: (context, index) => CustomListItem(
+                            img:
+                                "https://reamakeup.com/wp-content/uploads/2016/09/alex-box-e1474388863424.jpg",
                             radius: 18,
                             text: "Recommended for you $index",
-                            height: 120,
+                            height: 180,
                             width: 150,
                           ),
                         ),
@@ -82,12 +86,15 @@ class _HomeState extends State<Home> {
                           height: 150,
                           itemCount: 100,
                           itemBuilder: (context, index) => CustomListItem(
+                            img:
+                                "https://img.grouponcdn.com/deal/v3wfxZTHPEznPBb9NVtNxY/studio_makeup-1500x900/v1/t600x362.jpg",
                             radius: 24,
                             text: "Recommended for you $index",
                             height: 150,
-                            width: 200,
+                            width: 120,
                           ),
                         ),
+                        const CustomTitle(title: "Popular"),
                       ],
                     ),
                     ListView.separated(
